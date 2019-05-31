@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="路小飞和小丸子">
+    <title>路小飞和小丸子</title>
+    <script type="text/javascript" src="static/jquery.min.js"></script>
+    <script type="text/javascript" src="static/TimeCircles.js"></script>
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/TimeCircles.css" />
+    <link rel="icon" href="xiaowanzi.jpeg">
+    <style>
+
+        audio {
+
+            position:absolute;
+            bottom: 0%;
+            display: block;
+            
+            left:50%;
+            margin-left:-125px;
+	
+	    
+
+        }
+
+        body {
+            -webkit-font-smoothing: antialiased;
+            font-family: Helvetica Neue, Helvetica, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+            background-color: #fffceb;
+        }
+
+        .container {
+            width: 800px;
+            height: 340px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -400px;
+            margin-top: -170px;
+
+            padding: 0;
+
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <button id="albumbtn" type="button" class="btn btn-default" onclick=" window.location.href='album.html';;">去相册</button>
+
+        <audio src="qingtian.mp3" loop="loop">丸子，你的浏览器不支持audio</audio>
+
+        <div class="content">
+            <h2>BEGIN: 2019-05-25 💓 CHERISH EVERY DAY</h2>
+            <div id="DateCountdown" data-date="2019-05-25 00:00:00"></div>
+        </div>
+    </div>
+    <script>
+
+        var v = document.getElementsByTagName("audio")[0];     
+        v.controls = "true";
+
+        $("#DateCountdown").TimeCircles();
+
+    </script>
+</body>
+
+</html>
